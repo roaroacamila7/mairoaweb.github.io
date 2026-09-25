@@ -10,10 +10,10 @@
   --bordo-700: #5A1925;
   --bordo-100: #F2E2E0;
 
-  /* Crema — fondos y portada del manual */
-  --crema: #F7F0E3;
-  --crema-200: #EFE4D1;
-  --crema-300: #E3D2B6;
+  /* Blanco — fondos y portada del manual (reemplaza al crema) */
+  --crema: #FFFFFF;
+  --crema-200: #F4F3F3;
+  --crema-300: #E4E1E1;
 
   /* Verde — acentos */
   --verde: #3E6A50;
@@ -24,7 +24,7 @@
   /* Texto */
   --tinta: #2B1D1F;
   --tinta-suave: #5B4749;
-  --blanco: #FFFCF6;
+  --blanco: #FFFFFF;
 
   /* Tipografía */
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -122,7 +122,7 @@ em { font-style: italic; }
 .btn--claro { --btn-bg: var(--crema); --btn-color: var(--bordo); --btn-borde: var(--crema); }
 .btn--claro:hover { --btn-bg: var(--blanco); --btn-borde: var(--blanco); }
 .btn--contorno-claro { --btn-bg: transparent; --btn-color: var(--crema); --btn-borde: var(--crema); }
-.btn--contorno-claro:hover { --btn-bg: rgba(247, 240, 227, .12); }
+.btn--contorno-claro:hover { --btn-bg: rgba(255, 255, 255, .12); }
 .btn--chico { min-height: 42px; padding: 8px 20px; font-size: .95rem; }
 .btn--ancho { width: 100%; }
 .btn[disabled] { cursor: progress; opacity: .8; transform: none; box-shadow: none; }
@@ -150,7 +150,7 @@ em { font-style: italic; }
 /* ---------- 1. Encabezado ---------- */
 .encabezado {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(247, 240, 227, .94);
+  background: rgba(255, 255, 255, .94);
   -webkit-backdrop-filter: saturate(140%) blur(10px);
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid transparent;
@@ -207,7 +207,7 @@ em { font-style: italic; }
 .hero::before {
   content: ""; position: absolute; z-index: -1;
   width: 520px; height: 520px; right: -220px; top: -160px; border-radius: 50%;
-  background: radial-gradient(circle, var(--crema-200) 0%, rgba(239, 228, 209, 0) 70%);
+  background: radial-gradient(circle, var(--crema-200) 0%, rgba(244, 243, 243, 0) 70%);
 }
 .hero__grilla { display: grid; gap: 48px; }
 .hero__titulo { font-size: clamp(2.5rem, 11vw, 4.4rem); color: var(--bordo); margin-top: 18px; }
@@ -322,7 +322,7 @@ em { font-style: italic; }
 .portada--tareas .portada__pie { color: var(--tinta-suave); }
 
 .portada--ruta { background: var(--bordo); color: var(--crema); transform: rotate(2deg); }
-.portada--ruta .portada__cinta { background: rgba(247, 240, 227, .14); color: var(--crema); }
+.portada--ruta .portada__cinta { background: rgba(255, 255, 255, .14); color: var(--crema); }
 .portada--ruta .portada__titulo { font-size: 1.12rem; margin-top: 14px; }
 .portada__camino {
   position: relative; flex: 1; margin: 14px 4px 10px;
@@ -380,7 +380,7 @@ em { font-style: italic; }
 .manual__datos {
   margin: 28px 0 0; padding: 18px 20px;
   display: grid; gap: 10px;
-  border: 1px solid rgba(247, 240, 227, .25); border-radius: var(--radio);
+  border: 1px solid rgba(255, 255, 255, .25); border-radius: var(--radio);
   background: rgba(0, 0, 0, .12);
 }
 .manual__datos[hidden], .manual__datos [hidden] { display: none; }
@@ -396,7 +396,7 @@ em { font-style: italic; }
 .pago__aviso { margin-top: 10px; font-size: .95rem; color: var(--crema); }
 .pago__aviso:not(:empty) {
   padding: 12px 14px; border-radius: 10px;
-  background: rgba(247, 240, 227, .1); border-left: 3px solid var(--verde-300);
+  background: rgba(255, 255, 255, .1); border-left: 3px solid var(--verde-300);
 }
 
 @keyframes latido { 50% { opacity: .35; } }
@@ -477,7 +477,7 @@ em { font-style: italic; }
 
 .spinner {
   display: none; width: 18px; height: 18px; border-radius: 50%;
-  border: 2.5px solid rgba(247, 240, 227, .4); border-top-color: var(--crema);
+  border: 2.5px solid rgba(255, 255, 255, .4); border-top-color: var(--crema);
   animation: girar .8s linear infinite;
 }
 .btn.cargando .spinner { display: inline-block; }

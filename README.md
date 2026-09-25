@@ -172,8 +172,8 @@ Hacé cada prueba **en el celular y en la computadora**. En el celular, probá t
 |---|---|
 | Bordó (principal) | `#6B1E2C` |
 | Bordó oscuro | `#4A1420` |
-| Crema (fondos) | `#F7F0E3` |
-| Crema oscuro | `#EFE4D1` |
+| Blanco (fondos) | `#FFFFFF` |
+| Gris muy claro (fondos secundarios) | `#F4F3F3` |
 | Verde (acentos) | `#3E6A50` |
 | Verde claro | `#A9C4A6` |
 
