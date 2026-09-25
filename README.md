@@ -135,6 +135,12 @@ Cómo se ve según lo que completes:
 
 ---
 
+### Si los cambios no se ven en el celular o la compu
+
+Los navegadores guardan una copia de `styles.css`, `config.js` y `main.js`. Cada vez que cambies alguno de esos archivos, abrí `index.html` (y `privacidad.html` si cambiaste `styles.css`) y subí el número de versión: `?v=2` → `?v=3`, en las líneas de `styles.css`, `config.js` y `main.js`. Después publicá como siempre. GitHub Pages puede tardar hasta 10 minutos más en mostrar la página nueva.
+
+---
+
 ## 6. Lista de pruebas finales
 
 Hacé cada prueba **en el celular y en la computadora**. En el celular, probá también en datos móviles (no solo wifi).
