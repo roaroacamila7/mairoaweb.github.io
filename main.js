@@ -59,6 +59,27 @@
     if (menu.classList.contains("abierto") && !encabezado.contains(e.target)) abrirMenu(false);
   });
 
+  /* ---------- Menú: marcar la sección visible ---------- */
+  var enlacesMenu = menu.querySelectorAll('.menu__lista a[href^="#"]');
+  if ("IntersectionObserver" in window && enlacesMenu.length) {
+    var visibles = {};
+    var observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) { visibles[e.target.id] = e.isIntersecting; });
+      var actual = null;
+      enlacesMenu.forEach(function (a) {
+        if (!actual && visibles[a.getAttribute("href").slice(1)]) actual = a;
+      });
+      enlacesMenu.forEach(function (a) {
+        if (a === actual) a.setAttribute("aria-current", "true");
+        else a.removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    enlacesMenu.forEach(function (a) {
+      var seccion = document.getElementById(a.getAttribute("href").slice(1));
+      if (seccion) observador.observe(seccion);
+    });
+  }
+
   /* ---------- Fotos: placeholder si la imagen no existe ---------- */
   document.querySelectorAll(".foto img").forEach(function (img) {
     function marcarFaltante() { img.closest(".foto").classList.add("sin-imagen"); }
@@ -103,10 +124,10 @@
   if (mp || pp) {
     pagoBotones.innerHTML = "";
     if (mp && pp) {
-      pagoBotones.appendChild(botonPago("Pagar con Mercado Pago", mp, "btn--claro"));
-      pagoBotones.appendChild(botonPago("Pagar con PayPal", pp, "btn--contorno-claro"));
+      pagoBotones.appendChild(botonPago("Pagar con Mercado Pago", mp, "btn--primario"));
+      pagoBotones.appendChild(botonPago("Pagar con PayPal", pp, "btn--secundario"));
     } else {
-      pagoBotones.appendChild(botonPago("Comprar con Mercado Pago o PayPal", mp || pp, "btn--claro"));
+      pagoBotones.appendChild(botonPago("Comprar con Mercado Pago o PayPal", mp || pp, "btn--primario"));
     }
     pagoEstado.hidden = true;
   } else {

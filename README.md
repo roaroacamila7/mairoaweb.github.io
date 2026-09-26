@@ -137,7 +137,7 @@ Cómo se ve según lo que completes:
 
 ### Si los cambios no se ven en el celular o la compu
 
-Los navegadores guardan una copia de `styles.css`, `config.js` y `main.js`. Cada vez que cambies alguno de esos archivos, abrí `index.html` (y `privacidad.html` si cambiaste `styles.css`) y subí el número de versión: `?v=2` → `?v=3`, en las líneas de `styles.css`, `config.js` y `main.js`. Después publicá como siempre. GitHub Pages puede tardar hasta 10 minutos más en mostrar la página nueva.
+Los navegadores guardan una copia de `styles.css`, `config.js` y `main.js`. Cada vez que cambies alguno de esos archivos, abrí `index.html` (y `privacidad.html` si cambiaste `styles.css`) y subí el número de versión: el número actual (por ejemplo `?v=3` → `?v=4`), en las líneas de `styles.css`, `config.js` y `main.js`. Después publicá como siempre. GitHub Pages puede tardar hasta 10 minutos más en mostrar la página nueva.
 
 ---
 
@@ -174,16 +174,20 @@ Hacé cada prueba **en el celular y en la computadora**. En el celular, probá t
 
 ## Paleta y tipografías (por si las necesitás para Canva)
 
-| Color | Código |
-|---|---|
-| Bordó (principal) | `#6B1E2C` |
-| Bordó oscuro | `#4A1420` |
-| Blanco (fondos) | `#FFFFFF` |
-| Gris muy claro (fondos secundarios) | `#F4F3F3` |
-| Verde (acentos) | `#3E6A50` |
-| Verde claro | `#A9C4A6` |
+El estilo sigue el sistema de diseño de Planpoint, pero con los colores de ADN asignados a cada rol. Todos los valores se cambian en `styles.css`, dentro de `:root`.
 
-Tipografías (Google Fonts, gratis): **Fraunces** para títulos y **DM Sans** para textos.
+| Rol | Color | Dónde se usa |
+|---|---|---|
+| Principal (`--principal`) | `#6B1E2C` bordó | Solo botones de acción principal, menú activo y la franja chica del hero |
+| Ink (`--ink`) | `#2B1D1F` | Todos los textos, íconos y el botón oscuro del header |
+| Ink suave (`--ink-suave`) | `#5B4749` | Textos secundarios |
+| Highlight (`--highlight`) | `#3E6A50` verde | Solo badges chicos ("PDF gratuito", "Próximo producto digital") |
+| Fondo (`--fondo`) | `#ffffff` | Fondo de la página |
+| Superficie (`--superficie`) | `#f0f2f4` | Tarjetas, contenedores, etiquetas |
+| Bordes (`--borde`) | `#e5e6e8` | Bordes y divisores |
+
+Tipografía (Google Fonts, gratis): **Inter** (400, 500, 600 y 700).
+Formas: botones y etiquetas pill (radio 100px), tarjetas con radio 28px, campos con radio 18px, sombra única `0 8px 48px rgba(0,0,0,.06)`.
 
 ## Probar la página en tu computadora
 
